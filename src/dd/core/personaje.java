@@ -4,7 +4,7 @@ package dd.core;
 
 public abstract class personaje {
     private String nombre;
-    tipoAtaque tipoAtaque;
+    private tipoAtaque tipoAtaque;
     private int salud;
 
     public personaje(String nombre) {
@@ -14,17 +14,21 @@ public abstract class personaje {
     public void setAtaque(String tipo) {
         switch (tipo) {
             case "AtaqueEspada":
-                tipoAtaque = new ataqueEspada();
+                this.tipoAtaque = new ataqueEspada();
                 break;
             case "AtaqueArco":
-                tipoAtaque = new ataqueArco();
+                this.tipoAtaque = new ataqueArco();
                 break;
             case "AtaqueCuchillo":
-                tipoAtaque = new ataqueCuchillo();
+                this.tipoAtaque = new ataqueCuchillo();
                 break;
             default:
                 break;
         }
+    }
+
+    public tipoAtaque getTipoAtaque() {
+        return tipoAtaque;
     }
 
     public int getSalud() {

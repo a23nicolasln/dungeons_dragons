@@ -17,7 +17,7 @@ public class troll extends personaje {
     @Override
     public String[] ataca(personaje enemigo) {
         String[] valoresAtaque= new String [2];
-        valoresAtaque[1] = "-" + String.valueOf(tipoAtaque.ataca(enemigo));
+        valoresAtaque[1] = "-" + String.valueOf(getTipoAtaque().ataca(enemigo));
         if (valoresAtaque[1].equals("-0")) {
             valoresAtaque[1] = "falla";
         }
